@@ -2,14 +2,14 @@
 #include <string>
 using namespace std;
 
-class Student  // Student¶ó´Â Å¬·¡½º¸¦ »ı¼º
+class Student  // Studentë¼ëŠ” í´ë˜ìŠ¤ë¥¼ ìƒì„±
 {
-private: // ÀÌ¸§°ú ÀüÈ­¹øÈ£´Â private·Î ¼³Á¤
+private: // ì´ë¦„ê³¼ ì „í™”ë²ˆí˜¸ëŠ” privateë¡œ ì„¤ì •
 
-	string name;  // ÀÌ¸§
-	string phone_num;   //¹øÈ£
+	string name;  // ì´ë¦„
+	string phone_num;   //ë²ˆí˜¸
 
-public: // addPhone(), editPhone(), getPnum(), getName()´Â publicÀ¸·Î ¼³Á¤
+public: // addPhone(), editPhone(), getPnum(), getName()ëŠ” publicìœ¼ë¡œ ì„¤ì •
 	void addPhone();
 	void editPhone();
 	string getPnum();
@@ -17,41 +17,41 @@ public: // addPhone(), editPhone(), getPnum(), getName()´Â publicÀ¸·Î ¼³Á¤
 
 };
 
-void Student::addPhone()  // »õ·Î¿î ¹øÈ£ Ãß°¡ÇÏ´Â ÇÔ¼ö
+void Student::addPhone()  // ìƒˆë¡œìš´ ë²ˆí˜¸ ì¶”ê°€í•˜ëŠ” í•¨ìˆ˜
 {
-	cout << "-- swing ÀüÈ­¹øÈ£ºÎ --" << endl;
-	cout << "ÀÌ¸§À» ÀÔ·ÂÇØ ÁÖ¼¼¿ä >>";
+	cout << "-- swing ì „í™”ë²ˆí˜¸ë¶€ --" << endl;
+	cout << "ì´ë¦„ì„ ì…ë ¥í•´ ì£¼ì„¸ìš” >>";
 	cin >> name;
-	cout << "ÀüÈ­¹øÈ£¸¦ ÀÔ·ÂÇØ ÁÖ¼¼¿ä >>" ;
+	cout << "ì „í™”ë²ˆí˜¸ë¥¼ ì…ë ¥í•´ ì£¼ì„¸ìš” >>" ;
 	cin >> phone_num;
 }
 
-void Student::editPhone()   // ±âÁ¸ÀÇ ¹øÈ£ ¼öÁ¤ÇÏ´Â ÇÔ¼ö
+void Student::editPhone()   // ê¸°ì¡´ì˜ ë²ˆí˜¸ ìˆ˜ì •í•˜ëŠ” í•¨ìˆ˜
 {
-	string n_name;
-	cout << "ÀÌ¸§À» ÀÔ·ÂÇØ ÁÖ¼¼¿ä >>";
+	string n_name;  // ìƒˆë¡­ê²Œ ì…ë ¥í•˜ëŠ” ì´ë¦„ í•˜ë‚˜ ë”
+	cout << "ì´ë¦„ì„ ì…ë ¥í•´ ì£¼ì„¸ìš” >>";
 	
 
-	do 
+	do   // nameê³¼ n_nameì´ ê°™ì„ ë•Œê¹Œì§€ ë°˜ë³µ
 	{
 		cin >> n_name;
-		if (name != n_name)
+		if (name != n_name)   //nameê³¼ n_nameì´ ë‹¤ë¦„ 
 		{
-			cout << "¿¬¶ôÃ³°¡ Á¸ÀçÇÏÁö ¾Ê½À´Ï´Ù. ´Ù½Ã ÀÔ·ÂÇØÁÖ¼¼¿ä. >>";
+			cout << "ì—°ë½ì²˜ê°€ ì¡´ì¬í•˜ì§€ ì•ŠìŠµë‹ˆë‹¤. ë‹¤ì‹œ ì…ë ¥í•´ì£¼ì„¸ìš”. >>";
 
 		}
 	} while (name != n_name);
 
-	cout << "º¯°æÇÒ ÀüÈ­¹øÈ£¸¦ ÀÔ·ÂÇØ ÁÖ¼¼¿ä >>";
+	cout << "ë³€ê²½í•  ì „í™”ë²ˆí˜¸ë¥¼ ì…ë ¥í•´ ì£¼ì„¸ìš” >>";
 	cin >> phone_num;
 }
 
-string Student::getPnum()   // ¹øÈ£¸¦ ºÒ·¯¿À´Â ÇÔ¼ö
+string Student::getPnum()   // ë²ˆí˜¸ë¥¼ ë¶ˆëŸ¬ì˜¤ëŠ” í•¨ìˆ˜
 {
 	return phone_num;
 }
 
-string Student::getName()   // ÀÌ¸§À» ºÒ·¯¿À´Â ÇÔ¼ö
+string Student::getName()   // ì´ë¦„ì„ ë¶ˆëŸ¬ì˜¤ëŠ” í•¨ìˆ˜
 {
 	return name;
 }
@@ -62,19 +62,19 @@ int main()
 	stu.addPhone();
 
 	int n;
-	do  // nÀÌ 3ÀÌ ³ª¿Ã ¶§±îÁö ¹İº¹
+	do  // nì´ 3ì´ ë‚˜ì˜¬ ë•Œê¹Œì§€ ë°˜ë³µ
 	{
-		cout << endl << "1. ÃÖ½Å µî·Ï ÀüÈ­¹øÈ£ Á¶È¸" << endl;
-		cout << "2. ÃÖ½Å µî·Ï ÀüÈ­¹øÈ£ ¼öÁ¤" << endl;
-		cout << "3. Á¾·á >> ";
-		cin >> n;  // nÀ» ÀÔ·Â¹ŞÀ½
+		cout << endl << "1. ìµœì‹  ë“±ë¡ ì „í™”ë²ˆí˜¸ ì¡°íšŒ" << endl;
+		cout << "2. ìµœì‹  ë“±ë¡ ì „í™”ë²ˆí˜¸ ìˆ˜ì •" << endl;
+		cout << "3. ì¢…ë£Œ >> ";
+		cin >> n;  // nì„ ì…ë ¥ë°›ìŒ
 
 		switch (n)   
 		{
-		case 1:  // ÀüÈ­¹øÈ£ Á¶È¸
+		case 1:   // 1ë²ˆ ëˆ„ë¥´ë©´ ì „í™”ë²ˆí˜¸ ì¡°íšŒ
 			cout << stu.getName() << "::" << stu.getPnum() << endl;
 			break;
-		case 2:   // ÀüÈ­¹øÈ£ ¼öÁ¤
+		case 2:   // 2ë²ˆ ëˆ„ë¥´ë©´ ì „í™”ë²ˆí˜¸ ìˆ˜ì •
 			stu.editPhone();			
 		}
 	} while (n != 3); 
